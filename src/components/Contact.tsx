@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Package, Truck, CreditCard } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Package, Truck, CreditCard } from "lucide-react";
 
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    address: '',
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
     quantity: 1,
-    message: '',
-    paymentMethod: 'cod'
+    message: "",
+    paymentMethod: "cod",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,18 +19,23 @@ function Contact() {
     console.log(formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const value = e.target.type === 'number' ? parseInt(e.target.value) : e.target.value;
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    const value =
+      e.target.type === "number" ? parseInt(e.target.value) : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: value
+      [e.target.name]: value,
     });
   };
 
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-center mb-12">Đặt Hàng</h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -51,7 +56,9 @@ function Contact() {
                 <Truck className="text-amber-600" />
                 <div>
                   <h3 className="font-semibold">Phí vận chuyển</h3>
-                  <p className="text-gray-600">Miễn phí vận chuyển cho đơn hàng từ 2 chai</p>
+                  <p className="text-gray-600">
+                    Miễn phí vận chuyển cho đơn hàng từ 2 chai
+                  </p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -68,19 +75,22 @@ function Contact() {
               <div className="flex items-center space-x-4">
                 <Phone className="text-amber-600" />
                 <div>
-                  <p>0123 456 789</p>
+                  <p>0987 835 247</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <Mail className="text-amber-600" />
                 <div>
-                  <p>info@honeyheaven.com</p>
+                  <p>lethanhan20039@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="text-amber-600" />
                 <div>
-                  <p>123 Đường Mật Ong, Quận 1, TP.HCM</p>
+                  <p>
+                    16/17/182 đường Hiệp Bình, p Hiệp Bình Chánh, Thủ Đức,
+                    TP.HCM
+                  </p>
                 </div>
               </div>
             </div>
@@ -92,10 +102,16 @@ function Contact() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+          >
             <h2 className="text-2xl font-semibold mb-6">Thông tin đặt hàng</h2>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Họ và tên
               </label>
               <input
@@ -109,7 +125,10 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email
               </label>
               <input
@@ -123,7 +142,10 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Số điện thoại
               </label>
               <input
@@ -137,7 +159,10 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Địa chỉ giao hàng
               </label>
               <input
@@ -151,7 +176,10 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="quantity"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Số lượng (chai)
               </label>
               <input
@@ -166,7 +194,10 @@ function Contact() {
               />
             </div>
             <div>
-              <label htmlFor="paymentMethod" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="paymentMethod"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Phương thức thanh toán
               </label>
               <select
@@ -182,7 +213,10 @@ function Contact() {
               </select>
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Ghi chú
               </label>
               <textarea
