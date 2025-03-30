@@ -7,12 +7,18 @@ function Home() {
   return (
     <div>
       <Helmet>
-        <title>Trang chủ - Mật Ong Ba Nuôi</title>
-        <meta name="description" content="Trang Chủ Của Mật Ong Ba Nuôi" />
-        <meta property="og:title" content="Trang chủ - Mật Ong Ba Nuôi" />
+        <title>Mật Ong Ba Nuôi - Mật Ong Rừng U Minh Nguyên Chất</title>
+        <meta
+          name="description"
+          content="Mật Ong Ba Nuôi - 100% nguyên chất từ rừng U Minh, không pha trộn, đạt chuẩn an toàn thực phẩm."
+        />
+        <meta
+          property="og:title"
+          content="Mật Ong Ba Nuôi - Mật Ong Rừng Nguyên Chất"
+        />
         <meta
           property="og:description"
-          content="Mat Ong Ba Nuoi mat ong ba nuoi"
+          content="Mật ong Ba Nuôi được thu hoạch thủ công từ rừng tràm U Minh, đảm bảo nguyên chất và giàu dưỡng chất tự nhiên."
         />
       </Helmet>
       <div className="relative h-[600px]">
