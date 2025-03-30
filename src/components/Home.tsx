@@ -15,7 +15,6 @@ function Home() {
           content="Mat Ong Ba Nuoi mat ong ba nuoi"
         />
       </Helmet>
-
       <div className="relative h-[600px]">
         <img
           src="/mat-ong-background.jpg"
