@@ -1,10 +1,21 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Check, Leaf, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div>
+      <Helmet>
+        <title>Trang chủ - Mật Ong Ba Nuôi</title>
+        <meta name="description" content="Trang Chủ Của Mật Ong Ba Nuôi" />
+        <meta property="og:title" content="Trang chủ - Mật Ong Ba Nuôi" />
+        <meta
+          property="og:description"
+          content="Mat Ong Ba Nuoi mat ong ba nuoi"
+        />
+      </Helmet>
+
       <div className="relative h-[600px]">
         <img
           src="/mat-ong-background.jpg"
