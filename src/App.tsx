@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-amber-50">
-        <nav className="bg-amber-800 text-white p-4 sticky top-0 z-50">
-          <div className="container mx-auto flex justify-between items-center">
+        <nav className="bg-orange-400 text-white p-4 sticky top-0 z-50">
+          <div className="container mx-auto flex justify-between items-center px-8">
             <Link
               to="/"
               className="flex items-center space-x-2 text-2xl font-bold"
@@ -20,9 +20,9 @@ function App() {
                 width={36}
                 height={36}
               />
-              <span>Mật Ong Ba Nuôi</span>
+              <span className="font-sans">BaNuoi</span>
             </Link>
-            <div className="hidden md:flex space-x-6">
+            <div className="hidden md:flex space-x-6 font-sans font-semibold">
               <Link to="/" className="hover:text-amber-200 transition">
                 Trang chủ
               </Link>
@@ -34,6 +34,20 @@ function App() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
+              <select
+                name="language"
+                id="language"
+                className="bg-white rounded-md px-2 py-1 text-orange-400 font-sans font-semibold text-sm"
+              >
+                <option value="Vietnamese" className="text-orange-400">
+                  VIE
+                </option>
+                <option value="English" className="text-orange-400">
+                  EN
+                </option>
+              </select>
+            </div>
+            <div className="flex items-center space-x-4 md:hidden">
               <button className="md:hidden">
                 <svg
                   className="w-6 h-6"
@@ -59,7 +73,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <footer className="bg-amber-900 text-white py-8">
+        <footer className="bg-orange-400 text-white py-8">
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Mật Ong Ba Nuôi</h3>
@@ -90,6 +104,19 @@ function App() {
                 <a href="#" className="hover:text-amber-200">
                   Twitter
                 </a>
+              </div>
+              <div className="mt-2">
+                <input
+                  type="email"
+                  placeholder="banuoihoney@gmail.com"
+                  className="bg-white rounded-l-md px-2 py-1 text-orange-400 font-sans font-semibold text-sm"
+                />
+                <button
+                  className="bg-orange-400 text-white rounded-r-md px-4 py-1 text-sm font-semibold
+                hover:bg-white hover:text-orange-400 transition shadow-md"
+                >
+                  Đăng ký
+                </button>
               </div>
             </div>
           </div>

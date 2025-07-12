@@ -23,48 +23,53 @@ function Home() {
       </Helmet>
       <div className="relative h-[600px]">
         <img
-          src="/mat-ong-background.jpg"
+          src="/banner-native.jpg"
+          alt="banner-honey"
           className="absolute inset-0 w-full h-full object-cover"
-          alt="Honey banner"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50" />
-        <div className="absolute inset-0 flex items-center justify-center text-center">
+
+        <div className="absolute inset-0 mt-96 flex items-center justify-center text-center bg-white rounded-t-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-white font-sans text-left mt-24"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Mật Ong Ba Nuôi
+            <h1 className="text-5xl font-extrabold uppercase leading-tight">
+              <span className="text-orange-400/80">
+                Mật ong tinh khiết, vị ngọt tự nhiên
+              </span>
+              <br />
+              <span className="text-orange-400">Mật Ong Ba Nuôi</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Tinh khiết từ thiên nhiên, vị ngọt tự nhiên
+            <p className="mt-4 text-lg font-medium text-orange-400">
+              <span className="font-bold">Không có gì đáng ngờ cả</span> — nhận
+              món quà sức khỏe từ thiên nhiên khi bạn sử dụng Mật Ong Ba Nuôi.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center bg-amber-500 text-white px-8 py-3 rounded-full text-lg hover:bg-amber-600 transition"
+              className="inline-flex items-center bg-orange-400 text-white font-sans font-semibold 
+              px-8 py-3 rounded-full text-lg hover:bg-white hover:text-orange-400 transition shadow-md mt-2"
             >
               Đặt hàng ngay <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </motion.div>
+          <img src="/honey-hehe.gif" alt="hehehe" className="w-64 mt-4" />
         </div>
       </div>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
+      <section className="py-16 bg-white ">
+        <div className="container mx-auto px-8">
+          <div
+            className="max-w-3xl mx-auto text-center mb-16 text-orange-400 font-sans
+          font-semibold mt-24"
+          >
             <h2 className="text-3xl font-bold mb-6">
-              Mật Ong Rừng U Minh Nguyên Chất
+              Quy Trình Thu Hoạch An Toàn
             </h2>
-            <p className="text-gray-600 text-lg">
-              Được thu hoạch trực tiếp từ rừng tràm U Minh, mật ong của chúng
-              tôi mang đến hương vị đặc trưng và giá trị dinh dưỡng cao nhất từ
-              thiên nhiên.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +83,7 @@ function Home() {
               />
               <div className="p-4 bg-white">
                 <h3 className="font-semibold text-lg">Mật Ong Nguyên Chất</h3>
-                <p className="text-gray-600">Màu sắc vàng óng tự nhiên</p>
+                <p className="">Màu sắc vàng óng tự nhiên</p>
               </div>
             </motion.div>
             <motion.div
@@ -94,9 +99,7 @@ function Home() {
               />
               <div className="p-4 bg-white">
                 <h3 className="font-semibold text-lg">Quy Trình Thu Hoạch</h3>
-                <p className="text-gray-600">
-                  Thu hoạch thủ công, đảm bảo chất lượng
-                </p>
+                <p className="">Thu hoạch thủ công, đảm bảo chất lượng</p>
               </div>
             </motion.div>
             <motion.div
@@ -112,27 +115,27 @@ function Home() {
               />
               <div className="p-4 bg-white">
                 <h3 className="font-semibold text-lg">Đóng Gói Cẩn Thận</h3>
-                <p className="text-gray-600">
-                  Bảo quản tối ưu, giữ trọn dưỡng chất
-                </p>
+                <p className="">Bảo quản tối ưu, giữ trọn dưỡng chất</p>
               </div>
             </motion.div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16 px-8">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl font-semibold mb-4">Đặc điểm nổi bật</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-orange-400">
+                Đặc điểm nổi bật
+              </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <Check className="text-amber-500 w-6 h-6 mt-1" />
                   <div>
                     <h4 className="font-semibold">100% Nguyên Chất</h4>
-                    <p className="text-gray-600">
+                    <p className="">
                       Không pha trộn, không thêm đường hay chất bảo quản
                     </p>
                   </div>
@@ -217,7 +220,7 @@ function Home() {
                     <li>Không có chất bảo quản</li>
                   </ul>
                 </div>
-                <div>
+                <div className="ml-44">
                   <h4 className="font-semibold mb-4">Công dụng</h4>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Tăng cường sức đề kháng</li>
@@ -233,9 +236,11 @@ function Home() {
                 </div>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center bg-amber-500 text-white px-8 py-3 rounded-full text-lg hover:bg-amber-600 transition"
+                  className="inline-flex items-center bg-orange-400 text-white px-8 py-3 
+                  rounded-full text-lg hover:bg-white hover:text-orange-400 font-sans font-semibold shadow-md transition"
                 >
-                  Đặt hàng ngay <ArrowRight className="ml-2 h-5 w-5" />
+                  Đặt hàng ngay{" "}
+                  <ArrowRight className="ml-2 h-5 w-5 font-semibold" />
                 </Link>
               </div>
             </div>
@@ -243,10 +248,10 @@ function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-50">
+      <section className="py-16 bg-amber-50 px-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Cam kết của chúng tôi
+          <h2 className="text-3xl font-bold text-center mb-12 text-orange-400 font-sans">
+            Cam Kết Của Chúng Tôi
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
